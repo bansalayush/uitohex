@@ -1,21 +1,62 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import logo from './logo.svg';
+import { View, TextInput, Dimensions, Text } from 'react-native';
 import './App.css';
-
+const { width, height } = Dimensions.get('window');
 class App extends Component {
+  handlePaste(e) {
+    var clipboardData, pastedData;
+
+    // Stop data actually being pasted into div
+    e.stopPropagation();
+    e.preventDefault();
+
+    // Get pasted data via clipboard API
+    clipboardData = e.clipboardData || window.clipboardData;
+    pastedData = clipboardData.getData('Text');
+
+    // Do whatever with pasteddata
+    alert(pastedData);
+  }
+
+  componentDidMount() {
+    document
+      .getElementById('editableDiv')
+      .addEventListener('paste', this.handlePaste);
+  }
+
   render() {
     return (
-      <div className="App">
-        <View style={{ width: 20, height: 50, backgroundColor: '#f00' }} />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <View
+        style={{ width: width, height: height }}
+        id="editableDiv"
+        contenteditable="true"
+      >
+        <View style={{ flexDirection: 'row' }}>
+          <Text>red</Text>
+          <TextInput
+            style={{ borderColor: '#ff0', borderWidth: 4, width: width / 2 }}
+          />
+        </View>
+
+        <View style={{ flexDirection: 'row' }}>
+          <Text>blue</Text>
+          <TextInput
+            style={{ borderColor: '#ff0', borderWidth: 4, width: width / 2 }}
+          />
+        </View>
+        <View style={{ flexDirection: 'row' }}>
+          <Text>green</Text>
+          <TextInput
+            style={{ borderColor: '#ff0', borderWidth: 4, width: width / 2 }}
+          />
+        </View>
+        <View style={{ flexDirection: 'row' }}>
+          <Text>alpha</Text>
+          <TextInput
+            style={{ borderColor: '#ff0', borderWidth: 4, width: width / 2 }}
+          />
+        </View>
+      </View>
     );
   }
 }
