@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View } from 'react-native';
+import React, {Component} from 'react';
+import {View} from 'react-native';
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,10 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <View style={{ width: 20, height: 50, backgroundColor: '#f00' }} />
+        <View style={{width: 20, height: 50, backgroundColor: '#f00'}} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title text-red-light">Welcome to React</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
