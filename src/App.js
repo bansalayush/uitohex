@@ -1,23 +1,15 @@
 import React, { Component } from 'react';
 import { View, TextInput, Dimensions, Text } from 'react-native';
 import './App.css';
+import { handlePaste } from './Util';
 const { width, height } = Dimensions.get('window');
+
 class App extends Component {
-  handlePaste(e) {
-    var clipboardData, pastedData;
-
-    // Stop data actually being pasted into div
-    e.stopPropagation();
-    e.preventDefault();
-
-    // Get pasted data via clipboard API
-    clipboardData = e.clipboardData || window.clipboardData;
-    pastedData = clipboardData.getData('Text');
-
-    // Do whatever with pasteddata
-    alert(pastedData);
+  constructor(props) {
+    super(props);
+    this.handlePaste = handlePaste;
   }
-
+  handleData(data) {}
   componentDidMount() {
     document
       .getElementById('editableDiv')
