@@ -29,8 +29,7 @@ class App extends Component {
       <div className="App">
         <View style={{width: 20, height: 50, backgroundColor: '#f00'}} />
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title text-red-light">Welcome to React</h1>
+          <h1 className="App-title text-red-light">UI To Hex</h1>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
