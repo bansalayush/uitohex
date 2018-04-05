@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "lodash": "^4.17.5",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-native-web": "^0.5.2",
@@ -15,6 +17,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-plugin-react-native-web": "^0.5.2"
+    "babel-plugin-react-native-web": "^0.5.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "tailwindcss": "^0.5.1"
   }
 }

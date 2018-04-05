@@ -1,10 +1,10 @@
+import { includes } from 'lodash';
 // UIColor(red:0.07, green:0.20, blue:0.13, alpha:1.0)  CASE 1
 function formatData(data) {
-  alert(data);
+  // alert(data);
   // for validating input
-  // var re = new RegExp(
-  //   '^UIColor(red:[0-9.]+, green:[0-9.]+, blue:[0-9.]+, alpha:[0-1.]+)$'
-  // );
+  console.log(includes('red:0.07, green:0.20, blue:0.13, alpha:1.0', 'red'));
+  // console.log(json);
 }
 export function handlePaste(e) {
   var clipboardData, pastedData;

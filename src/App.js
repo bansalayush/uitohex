@@ -3,17 +3,11 @@ import { View, TextInput, Dimensions, Text } from 'react-native';
 import './App.css';
 import { handlePaste } from './Util';
 const { width, height } = Dimensions.get('window');
-
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handlePaste = handlePaste;
-  }
-  handleData(data) {}
   componentDidMount() {
-    document
-      .getElementById('editableDiv')
-      .addEventListener('paste', this.handlePaste);
+    document.getElementById('editableDiv').addEventListener('paste', e => {
+      handlePaste(e);
+    });
   }
 
   render() {
