@@ -1,7 +1,10 @@
-import React, {Component} from 'react';
-import {View, TextInput, Dimensions, Text} from 'react-native';
+import React, {Component, Fragment} from 'react';
+/*import {View, textinput, Dimensions, Text} from 'react-native-web';*/
 import './App.css';
-const {width, height} = Dimensions.get('window');
+import './index.css';
+
+/*const {width, height} = Dimensions.get('window');*/
+
 class App extends Component {
   handlePaste(e) {
     var clipboardData, pastedData;
@@ -26,15 +29,47 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <View style={{width: 20, height: 50, backgroundColor: '#f00'}} />
-        <header className="App-header">
-          <h1 className="App-title text-red-light">UI To Hex</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Fragment>
+        <text>
+          <h1 className="heading">UI To RGB</h1>
+        </text>
+        <h2>
+          Enter a UI Color code to Convert it to RGBA or HEX(Coming Soon!)
+        </h2>
+        <form>
+          <div id="editableDiv">
+            <text>
+              Red:
+              <input placeholder="Red" type="number" required={true} />
+            </text>
+            <text>
+              Green:
+              <input placeholder="Green" type="number" required={true} />
+            </text>
+            <text>
+              Blue:
+              <input placeholder="Blue" type="number" required={true} />
+            </text>
+            <text>
+              Alpha:
+              <input
+                placeholder="alpha"
+                type="number"
+                min="0"
+                max="1"
+                required={true}
+              />
+            </text>
+          </div>
+          <button class="submit" type="submit">
+            Submit
+          </button>
+        </form>
+        <div className="output">
+          The Equivalent RGB Code is:
+          <div className="color" />
+        </div>
+      </Fragment>
     );
   }
 }
