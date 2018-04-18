@@ -1,0 +1,47 @@
+#header {
+  display: grid;
+  grid-gap: 20px;
+  padding: 1rem;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: sans-serif;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  /*background-color: white;*/
+}
+
+h2 {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: grid;
+  margin-left: 3vw;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+h2:before {
+  display: block;
+  content: '';
+  height: 10px;
+  background: linear-gradient(to left, #ffc600, transparent);
+}
+h2:after {
+  display: block;
+  content: '';
+  height: 10px;
+  background: linear-gradient(to right, #ffc600, transparent);
+}
+
+h1,
+h2 {
+  font-family: sans-serif;
+  text-align: center;
+}
