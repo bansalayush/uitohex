@@ -1,7 +1,7 @@
-import React, {Component, Fragment} from 'react';
-import Header from './Components/Header';
-import Form from './Components/Form/';
-import Footer from './Components/Footer';
+import React, { Component, Fragment } from 'react';
+import Header from '../Header';
+import Form from '../Form';
+import Footer from '../Footer';
 import './App.css';
 
 /*const {width, height} = Dimensions.get('window');*/

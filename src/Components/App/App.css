@@ -1,5 +1,5 @@
 html {
-  background: url('./assets/images/background.jpg');
+  background: url('../../assets/images/background.jpg');
   background-size: cover;
   font-family: 'helvetica neue';
   text-align: center;
